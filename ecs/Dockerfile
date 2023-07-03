@@ -67,8 +67,8 @@ LABEL maintainer="ProcessOne <contact@process-one.net>" \
     org.label-schema.schema-version="1.0"
 
 # Create directory structure and user for ejabberd
-RUN addgroup ejabberd -g 9000 \
-    && adduser -s /bin/sh -D -G ejabberd ejabberd -u 9000 \
+RUN addgroup ejabberd -g 900000 \
+    && adduser -s /bin/sh -D -G ejabberd ejabberd -u 900000 \
     && mkdir -p /home/ejabberd/conf /home/ejabberd/database /home/ejabberd/logs /home/ejabberd/upload \
     && chown -R ejabberd:ejabberd /home/ejabberd
 
